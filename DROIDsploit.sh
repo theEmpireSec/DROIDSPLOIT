@@ -12,8 +12,9 @@ echo '(______/ |/   \__/(_______)\_______/(______/ \_______)|/       (_______/(_
 
 
 echo '---------------------------------------------------------------------------------------------------------------------------'
-echo 'Author : King'
-echo 'Instagram : hacking_with_king'
+echo 'Author    : King'
+echo 'Instagram : @the.empiresec'
+echo 'GitHub    : https://github.com/theEmpireSec/
 echo '---------------------------------------------------------------------------------------------------------------------------'
 echo 'Description : DROIDsploit is a msfvenom(Metasploit) payload generation automation tool'
 echo
